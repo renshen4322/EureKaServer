@@ -9,14 +9,14 @@ server:
   port: 8001
 eureka:
   instance:
-    hostname: 192.168.2.102
+    hostname: 192.168.150.130
     prefer-ip-address: true
-    instance-id: 192.168.2.102:8001
+    instance-id: 192.168.150.130:8001
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://192.168.2.102:8002/eureka/
+      defaultZone: http://192.168.150.130:8002/eureka/
 
 ---
 spring:
@@ -25,11 +25,11 @@ server:
   port: 8002
 eureka:
   instance:
-    hostname: 192.168.2.102
+    hostname: 192.168.150.130
     prefer-ip-address: true
-    instance-id: 192.168.2.102:8002
+    instance-id: 192.168.150.130:8002
   client:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://192.168.2.102:8001/eureka/
+      defaultZone: http://192.168.150.130:8001/eureka/
